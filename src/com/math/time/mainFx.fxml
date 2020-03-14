@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ScrollPane?>
+<HBox fx:id="mainHbox" alignment="center" prefHeight="241.0" prefWidth="242.0" spacing="1.0" style="-fx-background-color: #E0E048;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math.time.Controller">
+    <VBox>
+        <children>
+            <Label id="clickButtons" text="Hours" textFill="WHITE">
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="5.0" />
+                </padding></Label>
+            <TextField fx:id="txtHours">
+                <VBox.margin>
+                    <Insets bottom="5.0" />
+                </VBox.margin></TextField>
+            <Label id="clickButtons" text="Minutes" textFill="WHITE">
+                <font>
+                    <Font name="Arial Bold" size="12.0" />
+                </font>
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="5.0" top="5.0" />
+                </padding></Label>
+            <TextField fx:id="txtminutes">
+                <VBox.margin>
+                    <Insets bottom="20.0" />
+                </VBox.margin></TextField>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+                <children>
+                    <Button fx:id="submit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clickSubmit" text="Submit" textFill="#010a26" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                        <effect>
+                            <DropShadow />
+                        </effect>
+                        <GridPane.margin>
+                            <Insets />
+                        </GridPane.margin>
+                        <font>
+                            <Font name="System Bold" size="12.0" />
+                        </font>
+                    </Button>
+                </children>
+            </GridPane>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+                <VBox.margin>
+                    <Insets />
+                </VBox.margin>
+                <padding>
+                    <Insets bottom="20.0" top="20.0" />
+                </padding>
+                <top>
+                    <HBox fillHeight="false" spacing="2.0" BorderPane.alignment="CENTER">
+                        <padding>
+                            <Insets bottom="20.0" />
+                        </padding>
+                    </HBox>
+                </top>
+                <bottom>
+                   <HBox fillHeight="false" spacing="20.0" BorderPane.alignment="CENTER">
+                      <children>
+                         <Button mnemonicParsing="false" onAction="#clickAdd" text="Add" />
+<!--                         <Button mnemonicParsing="false" onAction="#clickSubtract" text="Subtract" />-->
+                         <Button mnemonicParsing="false" onAction="#clickReset" text="Reset" />
+                      </children>
+                      <BorderPane.margin>
+                         <Insets top="10.0" />
+                      </BorderPane.margin>
+                   </HBox>
+                </bottom>
+                <center>
+                    <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                        <content>
+                            <VBox fx:id="showVBox">
+                            </VBox>
+                        </content>
+                    </ScrollPane>
+                </center></BorderPane>
+        </children></VBox>
+    <padding>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+</HBox>
